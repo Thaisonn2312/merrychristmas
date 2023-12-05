@@ -1,0 +1,35 @@
+import turtle
+
+def draw_christmas_tree():
+    turtle.color("green")
+    turtle.begin_fill()
+    turtle.forward(100)
+    turtle.left(120)
+    turtle.forward(100)
+    turtle.left(120)
+    turtle.forward(100)
+    turtle.end_fill()
+
+def draw_merry_christmas_text(name):
+    turtle.penup()
+    turtle.goto(-50, -50)
+    turtle.color("red")
+    turtle.write(f"Merry Christmas {name}!", font=("Arial", 16, "bold"))
+
+def main():
+    turtle.bgcolor("lightblue")
+
+    # Vẽ cây thông
+    turtle.penup()
+    turtle.goto(0, -150)
+    turtle.pendown()
+    draw_christmas_tree()
+
+    # Vẽ văn bản chúc mừng
+    draw_merry_christmas_text("Thuỷ Tiên")
+
+    turtle.hideturtle()
+    turtle.done()
+
+if __name__ == "__main__":
+    main()
